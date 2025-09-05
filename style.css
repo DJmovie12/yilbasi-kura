@@ -1,0 +1,214 @@
+html,
+body {
+  margin: 0
+}
+
+#karAlani {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #171723;
+  overflow: hidden;
+  z-index: -1;
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
+}
+
+.fa-snowflake-o {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  animation: ani1 linear forwards;
+}
+
+@keyframes ani1 {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+.main {
+  color: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+.yazi {
+  text-shadow: 0px 0px 50px rgb(255, 255, 255);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.user {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-left: 200px;
+  font-size: 30px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.user::-webkit-scrollbar {
+  width: 10px; /* Scrollbar genişliği */
+  background-color: transparent; /* Arka plan rengi */
+  padding-left: 10px;
+}
+
+.user::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Scrollbar rengi */
+  border-radius: 10px; /* Kenar yuvarlatma */
+}
+.input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-container {
+  position: relative;
+}
+
+.placeholder-text {
+  position: absolute;
+  font-size: 18px;
+  width: 100%;
+  font-weight: 700;
+  top: 19px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.users {
+  font-size: 20px;
+}
+
+dialog {
+	padding: 1rem 3rem;
+	background-image: linear-gradient(135deg, #171723, #2c2c3e);
+	max-width: 500px;
+	padding-top: 2rem;
+  color: white;
+  text-shadow: 0px 0px 50px rgb(255, 255, 255);
+	border-radius: 20px;
+	border: 0;
+	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+	animation: fadeIn 1s ease both;
+	&::backdrop {
+		animation: fadeIn 1s ease both;
+		background: rgba(255, 255, 255, 0);
+		z-index: 2;
+		backdrop-filter: blur(20px);
+	}
+	.x {
+		filter: grayscale(1);
+		border: none;
+		background: none;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		transition: ease filter, transform 0.3s;
+		cursor: pointer;
+		transform-origin: center;
+    animation: fadeIn 1s ease both;
+		&:hover {
+			filter: grayscale(0);
+			transform: scale(1.1);
+		}
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.3rem;
+		padding: 0.5rem 0;
+		a {
+			&:visited {
+				color: rgb(var(--vs-primary));
+			}
+		}
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn2 {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #c573ff, #9d8eff 50%, #00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
